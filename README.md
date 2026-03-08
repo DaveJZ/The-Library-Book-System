@@ -1,4 +1,4 @@
-#The Library Book System
+The Library Book System
 This C++ program manages library books, patrons, and checkouts. 
 
 Features
@@ -27,3 +27,4 @@ How to Run
 2.Use the default text or change it in Books.txt and Patrons.txt in that same folder.
 3.Open your terminal or command prompt.
 4.Compile the code using a C++ compiler
+
