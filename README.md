@@ -1,12 +1,29 @@
-Inputs: The application accepts user menu choices, patron IDs, book titles, and author names. It loads starting data from Books.txt and Patrons.txt.
-Outputs: The console displays book lists, patron lists, due dates, and error messages. The system saves state to output text files on exit.
+#The Library Book System
+This C++ program manages library books, patrons, and checkouts. 
 
-START
-Initialize Library system
-Try loading data from files WHILE user choice is not "Save and Exit"     Display menu 
-    Get choice
-    IF choice is 1: Display books     IF choice is 2: Display patrons     IF choice is 3: Get ID and title, checkout book     IF choice is 4: Get ID and title, return book     IF choice is 5: Get author name, search books     Catch and show errors (missing books, bad IDs) 
-END WHILE
-Save library data to files 
-END
+Features
+View all books in the library.
+View registered patrons.
+Check out books to patrons.
+Return borrowed books.
+Search for books by the author's name.
+Automatically calculate due dates.
 
+Inputs and Outputs
+Inputs: Accepts menu choices, patron IDs, book titles, and author names from the user. It loads starting inventory and patron data from Books.txt and Patrons.txt.
+Outputs: Displays book lists, patron lists, transaction due dates, and error messages. The system saves the final state to output text files (Books_out.txt, Patrons_out.txt, Transactions_out.txt) when you exit.
+
+Project Structure
+main.cpp: The main menu loop and user interface.
+Library.h / Library.cpp: Manages the collections of books, patrons, and transactions.
+Book.h / Book.cpp: The base class for books, plus derived classes for EBook and PrintedBook.
+Patron.h / Patron.cpp: Manages patron details and their borrowed books.
+Transaction.h / Transaction.cpp: Tracks checkout records.
+Date.h / Date.cpp: Handles current dates and due date math.
+Globals.h: Holds shared enums and helper functions.
+
+How to Run
+1.Put all the .cpp and .h files into one folder.
+2.Use the default text or change it in Books.txt and Patrons.txt in that same folder.
+3.Open your terminal or command prompt.
+4.Compile the code using a C++ compiler
